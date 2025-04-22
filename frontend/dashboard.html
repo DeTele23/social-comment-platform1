@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Social Comment Platform</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Social Comment Platform</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="dashboard.html" class="active">Dashboard</a>
+                <a href="#" id="logoutLink">Logout</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="dashboard">
+            <h1>Welcome, <span id="username-display">User</span>!</h1>
+            
+            <div class="dashboard-section">
+                <h2>Account Settings</h2>
+                <form id="update-password-form">
+                    <div class="form-group">
+                        <label for="current-password">Current Password</label>
+                        <input type="password" id="current-password" name="current-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="new-password">New Password</label>
+                        <input type="password" id="new-password" name="new-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-new-password">Confirm New Password</label>
+                        <input type="password" id="confirm-new-password" name="confirm-new-password" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Update Password</button>
+                    </div>
+                    <div id="password-update-message"></div>
+                </form>
+            </div>
+            
+            <div class="dashboard-section">
+                <h2>My Comments</h2>
+                <div id="my-comments-container">
+                    <!-- User's comments will be loaded here dynamically -->
+                    <div class="loading">Loading your comments...</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Social Comment Platform - Cloud Database Class Project</p>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/comments.js"></script>
+</body>
+</html>
