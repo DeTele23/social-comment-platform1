@@ -8,7 +8,7 @@ const pool = mysql.createPool({
   user: process.env.DB_USER || 'scpadmin',
   password: process.env.DB_PASSWORD || 'HelloWorld24',
   database: process.env.DB_NAME || 'Social-Comment-Platform',
-  waitForConnections: True,
+  waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0
 });
