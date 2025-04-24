@@ -1,0 +1,6 @@
+#ignore environment config
+api/.env
+
+#ignore node modules
+api/node_modules/
+
