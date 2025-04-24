@@ -16,7 +16,6 @@ module.exports = async function (context, req) {
 
   try {
     await sql.connect(config);
-
     const result = await sql.query`
       SELECT * FROM Users WHERE username = ${username} AND password = ${password}
     `;
@@ -30,13 +29,14 @@ module.exports = async function (context, req) {
     }
 
     const user = result.recordset[0];
-    const token = jwt.sign({ id: user.id, username: user.username }, process.env.JWT_SECRET, {
-      expiresIn: "1h"
-    });
+    const token = jwt.sign(
+      { id: user.id, username: user.username },
+      process.env.JWT_SECRET,
+      { expiresIn: "1h" }
+    );
 
     context.res = {
       status: 200,
-      headers: { "Content-Type": "application/json" },
       body: { message: "Login successful", token, username: user.username }
     };
   } catch (err) {
