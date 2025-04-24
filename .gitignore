@@ -1,7 +1,7 @@
 #ignore environment config
 api/.env
 .env
-
+api/.local.settings
 #ignore node modules
 api/node_modules/
 

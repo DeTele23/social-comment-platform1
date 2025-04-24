@@ -1,0 +1,9 @@
+{
+    "IsEncrypted": false,
+    "Values": {
+      "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+      "FUNCTIONS_WORKER_RUNTIME": "node",
+      "JWT_SECRET": "11589995c8616ed7443ab0085b50097d7734da1918ee13e67d588a99e2696f08"
+    }
+  }
+  
