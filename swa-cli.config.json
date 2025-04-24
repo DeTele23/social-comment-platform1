@@ -3,7 +3,9 @@
   "configurations": {
     "social-comment-platform1": {
       "appLocation": "frontend",
-      "outputLocation": "."
+      "outputLocation": ".",
+      "appName": "social-comment-platform",
+      "resourceGroup": "social-comment-platform-rg"
     }
   }
 }
